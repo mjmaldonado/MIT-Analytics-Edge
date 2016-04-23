@@ -428,3 +428,13 @@ plot(
   ylab = "Information on Internet",
   main = "Relationship between Age and Information on Internet"
 )
+
+# 4.4.5
+# What is the average Info.On.Internet value for smartphone users?
+# What is the average Info.On.Internet value for non-smartphone users?
+tapply( (limited$Info.On.Internet), (limited$Smartphone), summary )
+
+# 4.4.6
+# What proportion of smartphone users who answered the Tried.Masking.Identity question of tried masking their identity when using the internet?
+# What proportion of non-smartphone users who answered the Tried.Masking.Identity question of tried masking their identity when using the internet?
+tapply( (limited$Tried.Masking.Identity), (limited$Smartphone), summary )
